@@ -9,13 +9,13 @@
         <validCheckSum>ANY</validCheckSum>
         <createTable tableName="CLIENT_USER_ACITIVTY">
             <column name="ID"
-                    type="UUID">
+                    type="${uuid.type}">
                 <constraints nullable="false"
                              primaryKey="true"
                              primaryKeyName="PK_CLIENT_USER_ACITIVTY"/>
             </column>
             <column name="USER_ID"
-                    type="UUID"/>
+                    type="${uuid.type}"/>
             <column name="ACTION_DESCRIPTION"
                     type="CLOB">
                 <constraints nullable="false"/>
@@ -25,20 +25,20 @@
             <column name="CREATED_DATE"
                     type="${offsetDateTime.type}"/>
             <column name="CLIENT_ID"
-                    type="UUID">
+                    type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
 
         <createTable tableName="USER_PROFILE_USER_ACITIVTY">
             <column name="ID"
-                    type="UUID">
+                    type="${uuid.type}">
                 <constraints nullable="false"
                              primaryKey="true"
                              primaryKeyName="PK_USER_PROFILE_USER_ACITIVTY"/>
             </column>
             <column name="USER_ID"
-                    type="UUID"/>
+                    type="${uuid.type}"/>
             <column name="ACTION_DESCRIPTION"
                     type="CLOB">
                 <constraints nullable="false"/>
@@ -51,7 +51,7 @@
 
         <createTable tableName="USER_TASK">
             <column name="ID"
-                    type="UUID">
+                    type="${uuid.type}">
                 <constraints nullable="false"
                              primaryKey="true"
                              primaryKeyName="PK_USER_TASK"/>
@@ -79,11 +79,11 @@
             </column>
             <column name="DESCRIPTION" type="CLOB"/>
             <column name="DUE_DATE" type="DATE"/>
-            <column name="AUTHOR_ID" type="UUID"/>
+            <column name="AUTHOR_ID" type="${uuid.type}"/>
         </createTable>
 
         <createTable tableName="CLIENT">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_CLIENT"/>
             </column>
             <column name="CREATED_BY"
@@ -112,7 +112,7 @@
             <column name="VAT_NUMBER" type="VARCHAR(255)"/>
             <column name="REG_NUMBER" type="VARCHAR(255)"/>
             <column name="WEBSITE" type="VARCHAR(255)"/>
-            <column name="ACCOUNT_MANAGER_ID" type="UUID"/>
+            <column name="ACCOUNT_MANAGER_ID" type="${uuid.type}"/>
 
             <column name="POSTAL_CODE" type="VARCHAR(255)"/>
             <column name="COUNTRY" type="VARCHAR(255)">
@@ -131,7 +131,7 @@
         </createTable>
 
         <createTable tableName="CONTACT">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_CONTACT"/>
             </column>
             <column name="CREATED_BY"
@@ -150,7 +150,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="CLIENT_ID" type="UUID">
+            <column name="CLIENT_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
             <column name="PERSON" type="VARCHAR(255)">
@@ -164,7 +164,7 @@
         </createTable>
 
         <createTable tableName="INVOICE">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_INVOICE"/>
             </column>
             <column name="CREATED_BY"
@@ -186,10 +186,10 @@
             <column name="NUMBER" type="VARCHAR(255)">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="CLIENT_ID" type="UUID">
+            <column name="CLIENT_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
-            <column name="ORDER_ID" type="UUID"/>
+            <column name="ORDER_ID" type="${uuid.type}"/>
             <column name="DATE_" type="DATE"/>
             <column name="DUE_DATE" type="DATE"/>
             <column name="SUBTOTAL" type="DECIMAL(19, 2)"/>
@@ -199,7 +199,7 @@
         </createTable>
 
         <createTable tableName="ORDER_">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ORDER_"/>
             </column>
             <column name="CREATED_BY"
@@ -222,7 +222,7 @@
                 <constraints nullable="false" unique="true"/>
             </column>
 
-            <column name="CLIENT_ID" type="UUID">
+            <column name="CLIENT_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
             <column name="DATE_" type="DATE"/>
@@ -235,7 +235,7 @@
         </createTable>
 
         <createTable tableName="PAYMENT">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_PAYMENT"/>
             </column>
             <column name="CREATED_BY"
@@ -254,7 +254,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="INVOICE_ID" type="UUID">
+            <column name="INVOICE_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
             <column name="NUMBER" type="VARCHAR(255)">
@@ -265,7 +265,7 @@
         </createTable>
 
         <createTable tableName="CATEGORY">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false"
                              primaryKey="true"
                              primaryKeyName="PK_CATEGORY"/>
@@ -287,7 +287,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="PARENT_ID" type="UUID"/>
+            <column name="PARENT_ID" type="${uuid.type}"/>
             <column name="NAME" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
@@ -298,7 +298,7 @@
         </createTable>
 
         <createTable tableName="CATEGORY_ITEM">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false"
                              primaryKey="true"
                              primaryKeyName="PK_CATEGORY_ITEM"/>
@@ -319,7 +319,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="CATEGORY_ID" type="UUID"/>
+            <column name="CATEGORY_ID" type="${uuid.type}"/>
             <column name="NAME" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
@@ -338,7 +338,7 @@
 
         <createTable tableName="CATEGORY_ITEM_COMMENT">
             <column name="ID"
-                    type="UUID">
+                    type="${uuid.type}">
                 <constraints nullable="false"
                              primaryKey="true"
                              primaryKeyName="PK_CATEGORY_ITEM_COMMENT"/>
@@ -348,19 +348,19 @@
             <column name="CREATED_DATE"
                     type="${offsetDateTime.type}"/>
 
-            <column name="CATEGORY_ITEM_ID" type="UUID">
+            <column name="CATEGORY_ITEM_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
             <column name="MESSAGE"
                     type="CLOB">
                 <constraints nullable="false"/>
             </column>
-            <column name="SENDER_ID" type="UUID"/>
+            <column name="SENDER_ID" type="${uuid.type}"/>
         </createTable>
 
         <createTable tableName="ORDER_ITEM">
             <column name="ID"
-                    type="UUID">
+                    type="${uuid.type}">
                 <constraints nullable="false"
                              primaryKey="true"
                              primaryKeyName="PK_ORDER_ITEM"/>
@@ -382,7 +382,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="CATEGORY_ITEM_ID" type="UUID"/>
+            <column name="CATEGORY_ITEM_ID" type="${uuid.type}"/>
             <column name="QUANTITY"
                     type="DECIMAL(19, 2)">
                 <constraints nullable="false"/>
@@ -400,7 +400,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="ORDER_ID"
-                    type="UUID">
+                    type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -432,7 +432,7 @@
 
 
         <createTable tableName="AI_CONVERSATION">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_AI_CONVERSATION"/>
             </column>
             <column name="TITLE" type="VARCHAR(255)"/>
@@ -443,10 +443,10 @@
             <column name="CREATED_DATE" type="timestamp with time zone"/>
         </createTable>
         <createTable tableName="AI_CONVERSATION_ATTACHMENT">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_AI_CONVERSATION_ATTACHMENT"/>
             </column>
-            <column name="MESSAGE_ID" type="UUID">
+            <column name="MESSAGE_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
             <column name="FILE_" type="VARCHAR(1024)">
@@ -463,10 +463,10 @@
             <column name="CREATED_DATE" type="timestamp with time zone"/>
         </createTable>
         <createTable tableName="CHAT_MESSAGE_ENTITY_REFERENCE">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_CHAT_MESSAGE_ENTITY_REFERENCE"/>
             </column>
-            <column name="MESSAGE_ID" type="UUID">
+            <column name="MESSAGE_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
             <column name="ENTITY_REFERENCE" type="VARCHAR(255)">
@@ -477,10 +477,10 @@
             <column name="CREATED_DATE" type="timestamp with time zone"/>
         </createTable>
         <createTable tableName="CHAT_MESSAGE">
-            <column name="ID" type="UUID">
+            <column name="ID" type="${uuid.type}">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_CHAT_MESSAGE"/>
             </column>
-            <column name="CONVERSATION_ID" type="UUID">
+            <column name="CONVERSATION_ID" type="${uuid.type}">
                 <constraints nullable="false"/>
             </column>
             <column name="CONTENT" type="CLOB"/>

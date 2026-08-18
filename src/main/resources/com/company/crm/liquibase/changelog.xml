@@ -17,6 +17,9 @@
               dbms="postgresql, hsqldb"
               value="timestamp without timezone"/>
 
+    <!-- Добавлено для Firebird: должно стоять перед включениями модулей Jmix -->
+    <include file="/io/github/makssent/jmix/firebird/liquibase/changelog.xml"/>
+
     <include file="/io/jmix/data/liquibase/changelog.xml"/>
     <include file="/io/jmix/flowuidata/liquibase/changelog.xml"/>
     <include file="/io/jmix/securitydata/liquibase/changelog.xml"/>

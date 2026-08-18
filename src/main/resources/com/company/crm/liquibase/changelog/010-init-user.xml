@@ -52,7 +52,7 @@
         <validCheckSum>ANY</validCheckSum>
 
         <!-- ADMIN -->
-        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="60885987-1b61-4247-94c7-dff348347f93"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="admin"/>
@@ -68,7 +68,7 @@
         </insert>
 
         <!-- SUPERVISOR -->
-        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="60885987-1b61-4247-94c7-dff348347f95"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="james"/>
@@ -86,7 +86,7 @@
         </insert>
 
         <!-- MANAGER -->
-        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="60885987-1b61-4247-94c7-dff348347f94"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="manager"/>
@@ -108,7 +108,7 @@
         <validCheckSum>ANY</validCheckSum>
 
         <!-- ADMIN -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="6c9e420a-2b7a-4c42-8654-a9027ee14083"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="admin"/>
@@ -124,7 +124,7 @@
         </insert>
 
         <!-- SUPERVISOR -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="6c9e420a-2b7a-4c42-8654-a9027ee14085"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="james"/>
@@ -140,7 +140,7 @@
         </insert>
 
         <!-- MANAGER -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="6c9e420a-2b7a-4c42-8654-a9027ee14084"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="manager"/>
@@ -160,7 +160,7 @@
         <validCheckSum>ANY</validCheckSum>
 
         <!-- ALICE (demo user) -->
-        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="alice"/>
@@ -180,7 +180,7 @@
         </insert>
 
         <!-- BOB (demo user) -->
-        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="USER_" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="robert"/>
@@ -204,7 +204,7 @@
         <validCheckSum>ANY</validCheckSum>
 
         <!-- ALICE: resource role "manager" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="c3d4e5f6-a7b8-9012-cdef-123456789012"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="alice"/>
@@ -220,7 +220,7 @@
         </insert>
 
         <!-- ALICE: row-level role "ai-chat-user-rl" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="c3d4e5f6-a7b8-9012-cdef-123456789013"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="alice"/>
@@ -236,7 +236,7 @@
         </insert>
 
         <!-- ALICE: row-level role "only-my-accounts-rl" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="c3d4e5f6-a7b8-9012-cdef-123456789014"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="alice"/>
@@ -252,7 +252,7 @@
         </insert>
 
         <!-- BOB: resource role "manager" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="d4e5f6a7-b8c9-0123-defa-234567890123"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="robert"/>
@@ -268,7 +268,7 @@
         </insert>
 
         <!-- BOB: row-level role "ai-chat-user-rl" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="d4e5f6a7-b8c9-0123-defa-234567890124"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="robert"/>
@@ -284,7 +284,7 @@
         </insert>
 
         <!-- BOB: row-level role "only-my-accounts-rl" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="d4e5f6a7-b8c9-0123-defa-234567890125"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="robert"/>
@@ -304,7 +304,7 @@
         <validCheckSum>ANY</validCheckSum>
 
         <!-- MANAGER: row-level role "ai-chat-user-rl" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="e5f6a7b8-c9d0-1234-efab-345678901234"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="manager"/>
@@ -320,7 +320,7 @@
         </insert>
 
         <!-- SUPERVISOR: row-level role "ai-chat-user-rl" -->
-        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb, h2, firebird">
             <column name="ID" value="f6a7b8c9-d0e1-2345-fabc-456789012345"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="james"/>
