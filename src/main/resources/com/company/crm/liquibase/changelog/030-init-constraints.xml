@@ -173,7 +173,8 @@
                                  baseTableName="CATEGORY"
                                  constraintName="FK_CATEGORY_ON_PARENT"
                                  referencedColumnNames="ID"
-                                 referencedTableName="CATEGORY"/>
+                                 referencedTableName="CATEGORY"
+                                 onDelete="CASCADE"/>
 
         <addForeignKeyConstraint baseColumnNames="CLIENT_ID"
                                  baseTableName="CLIENT_USER_ACITIVTY"

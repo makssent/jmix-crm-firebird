@@ -137,10 +137,10 @@ configurations.implementation {
 tasks.register("testPreparing", Delete) {
     dependsOn(cleanConf)
     doLast {
-        def dbDir = file('.jmix/hsqldb')
+        def dbDir = file('/home/user/db')
         if (dbDir.exists()) {
             dbDir.listFiles().each { file ->
-                if (file.name.startsWith('test.')) {
+                if (file.name.startsWith('test-b2b-crm')) {
                     file.delete()
                     println "Deleted: ${file.name}"
                 }
