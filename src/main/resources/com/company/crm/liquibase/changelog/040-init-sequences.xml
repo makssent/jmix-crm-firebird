@@ -4,10 +4,25 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
-    <changeSet id="1" author="crm">
+    <changeSet id="1" author="crm" dbms="!firebird">
         <createSequence sequenceName="CRM_PAYMENT_NUMBER" startValue="1000"/>
         <createSequence sequenceName="CRM_INVOICE_NUMBER" startValue="1000"/>
         <createSequence sequenceName="CRM_ORDER_NUMBER" startValue="1000"/>
         <createSequence sequenceName="CRM_PURCHASE_ORDER_NUMBER" startValue="1000"/>
+    </changeSet>
+
+    <!-- В Liquibase для firebird отключена реализация - startValue, поэтому проект падает с ошибкой
+         "startValue is not allowed on firebird". Для этого делаем фикс, пока pr не будет
+         в релизной версии: https://github.com/liquibase/liquibase/pull/7922 -->
+    <changeSet id="2" author="crm" dbms="firebird">
+        <createSequence sequenceName="CRM_PAYMENT_NUMBER"/>
+        <createSequence sequenceName="CRM_INVOICE_NUMBER"/>
+        <createSequence sequenceName="CRM_ORDER_NUMBER"/>
+        <createSequence sequenceName="CRM_PURCHASE_ORDER_NUMBER"/>
+
+        <sql>ALTER SEQUENCE CRM_PAYMENT_NUMBER RESTART WITH 1000</sql>
+        <sql>ALTER SEQUENCE CRM_INVOICE_NUMBER RESTART WITH 1000</sql>
+        <sql>ALTER SEQUENCE CRM_ORDER_NUMBER RESTART WITH 1000</sql>
+        <sql>ALTER SEQUENCE CRM_PURCHASE_ORDER_NUMBER RESTART WITH 1000</sql>
     </changeSet>
 </databaseChangeLog>

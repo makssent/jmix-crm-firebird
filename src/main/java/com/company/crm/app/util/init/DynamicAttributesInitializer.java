@@ -15,6 +15,7 @@ import io.jmix.dynattr.model.CategoryAttribute;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,9 @@ import java.util.function.Supplier;
 
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
+// postConstruct() читает базу, поэтому бин должен создаваться после того, как Liquibase
+// накатит схему. Иначе на пустой базе запуск падает на отсутствующей DYNAT_CATEGORY.
+@DependsOn("jmix_Liquibase")
 public class DynamicAttributesInitializer {
 
     private static final Logger log = LoggerFactory.getLogger(DynamicAttributesInitializer.class);
