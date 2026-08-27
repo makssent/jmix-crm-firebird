@@ -116,7 +116,7 @@ dependencies {
 
     //              --- [ DATABASE ] ---
     // runtimeOnly 'org.hsqldb:hsqldb'
-    implementation 'io.github.makssent:jmix-firebird-starter:0.1.0'
+    implementation 'io.github.makssent:jmix-firebird-starter:3.0.0'
     runtimeOnly 'org.firebirdsql.jdbc:jaybird:6.0.5'
     // For online mode
     implementation 'org.apache.commons:commons-dbcp2'
