@@ -24,7 +24,7 @@
 
 - Java 21
 - Jmix (Spring Boot & Vaadin Flow)
-- HSQLDB
+- Firebird
 
 ## 📖 Pregled
 

@@ -25,7 +25,7 @@ production-ready business systems including `customers`, `orders`, `invoicing`, 
 
 - Java 21
 - Jmix (Spring Boot & Vaadin Flow)
-- HSQLDB
+- Firebird
 
 ## 📖 Overview
 
